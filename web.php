@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\DB;
 Route::get('/',[ProductController::class, 'index'])->name('home');
 Route::get('/product/create',[ProductController::class, 'create'])->middleware('EmployeeMiddleware')->name('create');
 Route::post('/product/create',[ProductController::class, 'getdata'])->name('create');
-Route::get('/product/details',[ProductController::class, 'details'])->name('details');
+Route::get('/product/details',[ProductController::class, 'getdetails'])->name('details');
 Route::get('/product/list',[ProductController::class, 'list'])->name('list');
 Route::get('/product/edit/{id}/{name}',[ProductController::class, 'edit']);
 Route::post('/product/edit',[ProductController::class, 'editSubmit'])->name('edit');
