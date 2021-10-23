@@ -231,4 +231,23 @@ class ProductController extends Controller
         
 
     }
+    function getdetails(Request $req){
+        
+
+        $id = $req->id;
+
+       $products = Product::where('id',$id)->first();
+       // return $products;
+        
+
+        return view('productDetail')->with('product', $products);
+
+    }
+    function mycart(){
+        return view('cart');
+    }
+
+   
+
+   
 }
